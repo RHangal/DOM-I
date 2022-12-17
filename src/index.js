@@ -67,4 +67,20 @@ const links = document.querySelectorAll("nav a");
 links.forEach((links,index) => links.textContent=navArr[index])
 links.forEach(links => links.classList.add('italic'))
 
+const logoImg = document.querySelector("#logo-img")
+logoImg.setAttribute("src", "http://localhost:9000/img/logo.png")
+
+const cta = {
+  "h1": "DOM Is Awesome",
+  "button": "Get Started",
+}
+
+const ctaH1 = document.querySelector(".cta-text h1")
+const ctaButton = document.querySelector(".cta-text button")
+const ctaImg = document.querySelector("#cta-img")
+
+ctaH1.textContent = cta.h1
+ctaButton.textContent = cta.button
+ctaImg.setAttribute("src", "http://localhost:9000/img/cta.png")
+
 console.log('project wired!')
