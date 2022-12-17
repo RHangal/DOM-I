@@ -39,4 +39,32 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
+const nav = {  
+  "nav-item-1": "Services",
+  "nav-item-2": "Product",
+  "nav-item-3": "Vision",
+  "nav-item-4": "Features",
+  "nav-item-5": "About",
+  "nav-item-6": "Contact",
+  
+};
+// const services = document.querySelector(".nav-item-1")
+// const product = document.querySelector(".nav-item-2")
+// const vision = document.querySelector(".nav-item-3")
+// const features = document.querySelector(".nav-item-4")
+// const about = document.querySelector(".nav-item-5")
+// const contact = document.querySelector(".nav-item-6")
+
+const navKeys = Object.keys(nav)
+const navArr = []
+const navList = navKeys.forEach(key => {
+  console.log(nav[key])
+  return navArr.push(nav[key])
+})
+console.log(navArr)
+
+const links = document.querySelectorAll("nav a");
+links.forEach((links,index) => links.textContent=navArr[index])
+links.forEach(links => links.classList.add('italic'))
+
 console.log('project wired!')
