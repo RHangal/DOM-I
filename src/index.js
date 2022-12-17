@@ -140,5 +140,12 @@ const contactSection = document.querySelectorAll(".contact *")
 console.log(contactSection)
 contactSection.forEach((links,index) => links.textContent = contactArr[index])
 
+const footerObj = {"copyright": "Copyright Great Idea! 2021",
+}
+
+const footerSection = document.querySelector("footer a")
+footerSection.textContent = footerObj.copyright
+footerSection.classList.add('bold')
+
 
 console.log('project wired!')
